@@ -1,0 +1,5 @@
+/home/zikunovsemen/vsCodeProjects/testProj/build/CMakeFiles/rebuild_cache.dir
+/home/zikunovsemen/vsCodeProjects/testProj/build/CMakeFiles/edit_cache.dir
+/home/zikunovsemen/vsCodeProjects/testProj/build/lib/CMakeFiles/rebuild_cache.dir
+/home/zikunovsemen/vsCodeProjects/testProj/build/lib/CMakeFiles/edit_cache.dir
+/home/zikunovsemen/vsCodeProjects/testProj/build/lib/CMakeFiles/test.dir
