@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.16)
+set(CMAKE_CXX_STANDARD 20)
+project(testProj)
+
+set(fmt ON CACHE BOOL "" FORCE)
+
+if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_COMPILER_IS_GNUCXX)
+    message("GCC")
+	# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror -pedantic")
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -pedantic")
+	set(CMAKE_CXX_CLANG_TIDY "clang-tidy")
+endif()
+
+set(Boost_USE_STATIC_LIBS OFF)
+set(Boost_USE_MULTITHREADED ON)
+set(Boost_USE_STATIC_RUNTIME OFF)
+find_package(Boost 1.75.0 COMPONENTS  system thread log program_options)
+if(Boost_FOUND)
+    add_compile_definitions(BOOST_BEAST_USE_STD_STRING_VIEW)
+    include_directories(${Boost_INCLUDE_DIRS})
+    add_subdirectory(lib)
+endif()
